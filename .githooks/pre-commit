@@ -1,0 +1,5 @@
+#!/bin/sh
+# Enabled by: git config core.hooksPath .githooks   (/setup does this)
+PY=python3
+command -v python3 >/dev/null 2>&1 || PY=py
+exec $PY scripts/pii_guard.py --staged

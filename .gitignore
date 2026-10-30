@@ -1,0 +1,26 @@
+# Client data never leaves this machine
+clients/*
+!clients/_TEMPLATE/
+!clients/_TEMPLATE/**
+!clients/_DEMO*/
+!clients/_DEMO*/**
+!clients/README.md
+
+# Hook logs
+logs/*
+!logs/.gitkeep
+
+# Local settings and secrets
+.claude/settings.local.json
+.mcp.json
+.env
+*.local.md
+
+# OS clutter
+.DS_Store
+Thumbs.db
+~$*
+
+# Python
+__pycache__/
+*.pyc
