@@ -16,6 +16,6 @@ A plain-language checklist for drafts. It does not replace your firm's complianc
 
 ## Personal data (PDPA)
 - Collect, use and disclose personal data only for the purpose the client consented to.
-- Protect it: masked identity numbers in working documents, no unapproved cloud uploads, follow the firm's retention rules.
+- Protect it: client data stored locally only, never in cloud storage; masked identity numbers in working documents; follow the firm's retention rules. Full rules: `pdpa.md`.
 
 Sources to check yourself: MAS Financial Advisers Act notices and guidelines (mas.gov.sg), PDPC guidance (pdpc.gov.sg), your firm's compliance manual.

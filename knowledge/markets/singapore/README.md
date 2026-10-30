@@ -7,5 +7,6 @@ The worked example market. Replace or extend these files for your own market; ke
 | `planning-assumptions.md` | `/fna`, `/annual-review` gap calculations |
 | `regulatory-checklist.md` | `/compliance-check`, record-of-advice sections |
 | `glossary.md` | All skills: local terms Claude should use correctly |
+| `pdpa.md` | Personal data rules: local-only storage, consent, NRIC handling, DNC, breach and retention. Read by `/compliance-check`, `/new-client`, `/data-audit`, `/data-breach` |
 
 Everything here is a starting point compiled from public sources. Confirm against current regulator and firm guidance before relying on it.

@@ -6,6 +6,11 @@ clients/*
 !clients/_DEMO*/**
 !clients/README.md
 
+# Pipeline holds client names
+pipeline/*
+!pipeline/README.md
+!pipeline/*.example.md
+
 # Hook logs
 logs/*
 !logs/.gitkeep

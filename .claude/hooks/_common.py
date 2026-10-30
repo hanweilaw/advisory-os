@@ -10,6 +10,25 @@ PROJECT_DIR = os.environ.get("CLAUDE_PROJECT_DIR") or os.getcwd()
 ID_PATTERN = re.compile(r"\b[STFGM]\d{7}[A-Z]\b")
 
 
+# Folder names used by cloud-sync clients. A path containing any of these as a
+# component is treated as cloud-hosted. Client data must never live there.
+CLOUD_MARKERS = (
+    "onedrive", "dropbox", "google drive", "googledrive", "my drive",
+    "icloud drive", "icloud", "mobile documents", "cloudstorage", "box",
+    "box sync", "pcloud", "pcloud drive", "mega", "sync", "tresorit",
+)
+
+
+def is_cloud_synced(path):
+    """True when any folder in the path belongs to a cloud-sync client."""
+    parts = os.path.normpath(os.path.abspath(path)).replace("\\", "/").split("/")
+    for part in parts:
+        p = part.lower()
+        if p in CLOUD_MARKERS or p.startswith("onedrive") or p.startswith("dropbox"):
+            return True
+    return False
+
+
 def read_event():
     try:
         return json.load(sys.stdin)

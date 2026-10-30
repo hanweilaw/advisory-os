@@ -10,6 +10,8 @@ Produces `00_Admin and Meeting Notes/YYYY-MM-DD_FNA DRAFT.md` using `templates/f
 
 ## Step 1: Gather
 
+Before anything else, confirm the signed consent / PDPA notice is in `01_Identity and Family` (or ticked on the intake checklist). If it isn't, stop and tell the adviser; don't draft an FNA without consent on file.
+
 Read the client's `CLAUDE.md`, snapshot, intake checklist, and every document in slots 01 to 06. If `--from-notes` is given, read that file too. With `--interview`, ask the adviser for missing fields one section at a time.
 
 ## Step 2: Fill sections 1 to 6 and 8 to 9

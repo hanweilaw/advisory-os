@@ -12,7 +12,8 @@
 | Market | {{Singapore}} (market pack: `knowledge/markets/singapore/`) |
 | Regulator | {{MAS}} |
 | Languages | {{English, Mandarin}} |
-| client_root | {{clients/ — or the full path to your synced client folder, e.g. C:\Users\you\OneDrive\Clients}} |
+| client_root | {{clients/ — or the full path to a LOCAL folder no cloud service syncs, e.g. C:\ClientVault or /Users/you/ClientVault}} |
+| Data Protection Officer | {{name, email}} |
 | Operating system | {{Windows / Mac}} |
 
 ## Who I serve

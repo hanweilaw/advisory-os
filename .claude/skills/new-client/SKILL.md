@@ -8,7 +8,7 @@ argument-hint: "\"Surname Firstname\" [--couple \"Spouse Name\"] [--business \"C
 
 ## Steps
 
-1. **Resolve the root.** Read `client_root` in `practice/profile.md` (default `clients/`).
+1. **Resolve the root.** Read `client_root` in `practice/profile.md` (default `clients/`). If it is inside a cloud-synced folder (OneDrive, Dropbox, Google Drive, iCloud, Box), stop and tell the adviser: client folders must be local only.
 2. **Name the folder** `Surname Firstname`. Couples go under the primary client; a business is `[Business] Company Name`. If a folder with that name (or a close match) exists, stop and show it rather than creating a second one.
 3. **Copy `clients/_TEMPLATE/`** to the new folder (all ten numbered slots).
 4. **Create `00_Client Snapshot.md`** from `templates/client-snapshot.md`, filling only what the adviser has told you. Everything else stays as a placeholder.
@@ -21,8 +21,8 @@ argument-hint: "\"Surname Firstname\" [--couple \"Spouse Name\"] [--business \"C
    Sensitivities: {{}}
    Notes for Claude: read 00_Client Snapshot.md first; latest meeting notes are in 00_Admin and Meeting Notes/.
    ```
-6. **Create `00_Admin and Meeting Notes/YYYY-MM-DD_Intake checklist.md`** listing what to collect before the FNA: ID (masked copy), family details, income and expenses, CPF statement, existing policies, investment statements, will/LPA status, risk profile questionnaire, consent for data collection.
+6. **Create `00_Admin and Meeting Notes/YYYY-MM-DD_Intake checklist.md`.** First section, "Before collecting anything (PDPA)": signed consent / PDPA notice, purpose explained, DNC check or marketing consent recorded for a prospect. Then what to collect before the FNA: ID (copy filed only in `01_Identity and Family`), family details, income and expenses, CPF statement, existing policies, investment statements, will/LPA status, risk profile questionnaire.
 7. **Add the client to `pipeline/prospects.md`** with stage `New` and today's date.
 8. Reply with the folder path and the three most useful next steps (usually: send the intake list, book the fact-find, run `/meeting-prep`).
 
-Never create files outside the client root and `pipeline/`.
+Never create files outside the client root and `pipeline/`. Collect only what the advice needs.

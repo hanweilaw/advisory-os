@@ -4,11 +4,19 @@ import datetime
 import os
 import re
 
-from _common import PROJECT_DIR
+from _common import PROJECT_DIR, client_root, is_cloud_synced
 
 today = datetime.date.today()
 horizon = today + datetime.timedelta(days=7)
 lines = []
+
+root = client_root()
+if is_cloud_synced(root):
+    lines.append(
+        f"STOP: the client folder ({root}) is inside a cloud-synced folder. Client data must stay on this "
+        "computer only (PDPA, see knowledge/markets/singapore/pdpa.md). Tell the adviser before doing any "
+        "client work, and help them move it to a local, non-synced folder. Writes there are blocked."
+    )
 
 practice = os.path.join(PROJECT_DIR, "practice")
 unfilled = []

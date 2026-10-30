@@ -15,11 +15,13 @@ Read every file in `practice/`. A file still holding `{{...}}` placeholders is u
 
 1. **Who are you?** Name, brand, firm, representative number, qualifications, languages. → `profile.md`
 2. **Which market and regulator?** Default Singapore / MAS. If another market, note that `knowledge/markets/` needs a pack for it and offer to draft one at the end. → `profile.md`
-3. **Where do your client files live?** Keep `clients/` in this folder, or a full path to a synced folder (OneDrive, Google Drive, a vault). → `client_root` in `profile.md`. Never copy client files during setup.
+3. **Where do your client files live?** They must be on this computer in a folder no cloud service syncs. Keep `clients/` in this folder, or give the full path to a local vault (e.g. `C:\ClientVault`). → `client_root` in `profile.md`.
+   - Check the answer, and this OS folder's own location, for OneDrive, Dropbox, Google Drive, iCloud, Box or similar. If either is cloud-synced, explain why that breaks the local-only rule and help them choose a local path before going on. Don't move or copy client files yourself; give them the steps.
+   - Ask whether the computer's disk is encrypted (BitLocker on Windows, FileVault on Mac) and how they back up. Recommend an encrypted external drive over cloud backup. Record both in `compliance-rules.md`.
 4. **Who do you serve, and how do you work?** Segments, process, how you're paid. → `profile.md`, `services.md`
 5. **What do you advise on, and what do you refer out?** → `services.md`
 6. **Which providers and products are on your shelf?** A rough list is fine; product documents can be added later to `knowledge/products/`. → `product-shelf.md`
-7. **Your compliance requirements.** Ask for the firm's standard disclaimer and any house rules; keep the example checklist items they agree with. → `compliance-rules.md`
+7. **Your compliance and PDPA requirements.** Ask for the firm's standard disclaimer, house rules, retention period, DPO contact and policy on AI tools with client data; keep the example checklist items they agree with. → `compliance-rules.md`, `profile.md`
 8. **Your voice.** Ask them to paste two things they wrote (a client email, a WhatsApp follow-up, a post). They must paste, not type fresh: if they start composing in the chat, stop them and ask for an existing message. Add a 2-3 line summary of their style. → `voice.md`
 
 Also ask their top three priorities for the quarter (each with a number or date) → `profile.md`.
@@ -28,6 +30,8 @@ Also ask their top three priorities for the quarter (each with a number or date)
 
 - Ask Windows or Mac. On Windows, replace `python3` with `py` in `.claude/settings.json` hook commands (show the diff, then apply).
 - Run `git config core.hooksPath .githooks` so the pre-commit PII guard is active, if this folder is a Git repo.
+- Create `pipeline/prospects.md` and `pipeline/follow-ups.md` from their `.example.md` files if they don't exist (they stay local and are never committed).
+- Run `/data-audit` once and report the result.
 
 ## Step 4: Close
 
